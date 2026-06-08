@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import logo from './assets/LogoChasmBrridgeTransparent.png'
 import heroImg from './assets/images/HeroSpace.png'
+import heroMobileImg from './assets/images/Hero9by16.png'
 import pathwayImg from './assets/images/graduate-development-pathway.png'
 import stakeholderImg from './assets/images/stakeholder-collaboration.png'
 
@@ -230,25 +231,32 @@ function App() {
       <main className="flex-grow">
         
         {/* 1. Hero Section */}
-        <section className="relative flex items-center min-h-[85vh] lg:min-h-[95vh] py-20 lg:py-32 text-white overflow-hidden bg-brand-navy-dark">
+        <section className="relative flex items-start md:items-center min-h-[85svh] md:min-h-[85vh] lg:min-h-[95vh] pt-28 pb-16 md:py-20 lg:py-32 text-white overflow-hidden bg-brand-navy-dark">
           {/* Background Image & Overlay */}
           <div className="absolute inset-0 z-0">
+            {/* Desktop Hero Image (horizontal) */}
             <img 
               src={heroImg} 
               alt="Graduates facing forward towards a brighter industrial horizon" 
-              className="w-full h-full object-cover object-center md:object-[32%_center]"
+              className="hidden md:block w-full h-full object-cover md:object-[32%_center]"
+            />
+            {/* Dedicated Mobile Hero Image (vertical 9:16) */}
+            <img 
+              src={heroMobileImg} 
+              alt="Graduates standing on bridge with industrial horizon" 
+              className="block md:hidden w-full h-full object-cover object-top"
             />
             {/* Full image overlay: rgba(0, 20, 45, 0.15) */}
             <div className="absolute inset-0 z-10" style={{ backgroundColor: 'rgba(0, 20, 45, 0.15)' }}></div>
-            {/* Soft linear gradient overlay on the left text area for readability (stays under 0.32 opacity) */}
-            <div className="absolute inset-0 z-10" style={{ backgroundImage: 'linear-gradient(to right, rgba(0, 20, 45, 0.32) 0%, rgba(0, 20, 45, 0.15) 50%, transparent 100%)' }}></div>
+            {/* Soft linear gradient overlay on the left text area for readability (stays under 0.30 opacity) */}
+            <div className="absolute inset-0 z-10" style={{ backgroundImage: 'linear-gradient(to right, rgba(0, 20, 45, 0.30) 0%, rgba(0, 20, 45, 0.10) 60%, transparent 100%)' }}></div>
             {/* Soft vertical transition overlay */}
             <div className="absolute inset-0 z-10 bg-gradient-to-t from-brand-navy-dark/40 via-transparent to-brand-navy-dark/35"></div>
           </div>
           
           <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex justify-start">
-            {/* Narrow, elegant, highly translucent glass panel to anchor readability and completely avoid overlap */}
-            <div className="w-full max-w-[480px] bg-brand-navy-dark/30 backdrop-blur-xs border border-white/5 p-6 sm:p-8 rounded-2xl shadow-xl space-y-6 lg:space-y-8 text-left hover:border-white/10 transition-smooth">
+            {/* Narrow text panel: sits directly on image on mobile, and converts to a premium glass card on desktop/tablet */}
+            <div className="w-full max-w-[480px] bg-brand-navy-dark/15 md:bg-brand-navy-dark/30 backdrop-blur-none md:backdrop-blur-xs border border-transparent md:border-white/5 p-0 md:p-8 rounded-none md:rounded-2xl shadow-none md:shadow-xl space-y-6 lg:space-y-8 text-left transition-smooth">
               
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-navy-light/80 border border-slate-700/40 text-brand-gold text-xs font-semibold uppercase tracking-wider hover-lift">
                 <Sparkles className="w-3.5 h-3.5 animate-pulse" />
@@ -278,14 +286,14 @@ function App() {
               <div className="flex flex-wrap items-center gap-4 pt-2">
                 <a 
                   href="mailto:Recruitment@chasmbridgecharity.com" 
-                  className="inline-flex items-center gap-2 bg-brand-gold hover:bg-brand-gold-dark text-brand-navy-dark px-5 py-3.5 rounded-xl font-bold hover-lift cursor-pointer shadow-lg shadow-brand-gold/15 focus-visible:outline-none text-sm"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-brand-gold hover:bg-brand-gold-dark text-brand-navy-dark px-5 py-3.5 rounded-xl font-bold hover-lift cursor-pointer shadow-lg shadow-brand-gold/15 focus-visible:outline-none text-sm"
                 >
                   <Mail className="w-4 h-4" />
                   Email Recruitment
                 </a>
                 <a 
                   href="#challenge" 
-                  className="inline-flex items-center gap-2 bg-brand-navy-dark/45 hover:bg-white/10 backdrop-blur-xs border border-slate-500/40 hover:border-slate-300 text-white px-5 py-3.5 rounded-xl font-semibold transition-smooth focus-visible:outline-none text-sm"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-brand-navy-dark/45 hover:bg-white/10 backdrop-blur-xs border border-slate-500/40 hover:border-slate-300 text-white px-5 py-3.5 rounded-xl font-semibold transition-smooth focus-visible:outline-none text-sm"
                 >
                   Learn More
                   <ArrowRight className="w-4 h-4 text-slate-300" />
