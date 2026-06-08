@@ -236,7 +236,7 @@ function App() {
             <img 
               src={heroImg} 
               alt="Graduates facing forward towards a brighter industrial horizon" 
-              className="w-full h-full object-cover object-center lg:object-[left_center]"
+              className="w-full h-full object-cover object-center md:object-[80%_center]"
             />
             {/* Full image overlay: rgba(0, 20, 45, 0.15) */}
             <div className="absolute inset-0 z-10" style={{ backgroundColor: 'rgba(0, 20, 45, 0.15)' }}></div>
@@ -252,21 +252,21 @@ function App() {
               
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-navy-light/80 border border-slate-700/40 text-brand-gold text-xs font-semibold uppercase tracking-wider hover-lift">
                 <Sparkles className="w-3.5 h-3.5 animate-pulse" />
-                Slogan: Helping Graduates Get a Foot in the Door
+                Helping Graduates Get a Foot in the Door
               </div>
               
-              <h1 className="text-white text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold tracking-tight leading-tight drop-shadow-md">
+              <h1 className="text-white text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold tracking-tight leading-tight drop-shadow-[0_4px_12px_rgba(7,11,25,0.75)]">
                 Helping Graduates Get <br />
                 <span className="bg-gradient-to-r from-brand-gold via-amber-400 to-amber-300 bg-clip-text text-transparent">
                   a Foot in the Door
                 </span>
               </h1>
               
-              <p className="text-slate-100 font-display text-lg sm:text-xl font-medium leading-relaxed max-w-2xl drop-shadow-sm">
+              <p className="text-slate-100 font-display text-lg sm:text-xl font-medium leading-relaxed max-w-2xl drop-shadow-[0_2px_8px_rgba(7,11,25,0.7)]">
                 A graduate-development and social-impact initiative helping unemployed graduates bridge the gap between qualification and meaningful opportunity.
               </p>
 
-              <div className="border-l-4 border-brand-green pl-4 space-y-3 text-slate-200 text-sm sm:text-base leading-relaxed drop-shadow-sm">
+              <div className="border-l-4 border-brand-green pl-4 space-y-3 text-slate-200 text-sm sm:text-base font-medium leading-relaxed drop-shadow-[0_2px_8px_rgba(7,11,25,0.7)]">
                 <p>
                   Every year, young people complete demanding qualifications with the hope of building a future. Yet for many graduates, the distance between academic achievement and industry opportunity remains difficult to cross.
                 </p>
