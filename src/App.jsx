@@ -124,12 +124,12 @@ function App() {
       {/* 1. Header / Navbar */}
       <header className="sticky top-0 z-50 bg-brand-navy-dark/95 backdrop-blur-md border-b border-brand-navy-light/40 text-white transition-smooth">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between py-3 md:py-4 min-h-[80px]">
             <div className="flex items-center gap-3">
               <img 
                 src={logo} 
                 alt="Chasm Bridge Charity Logo" 
-                className="h-12 w-auto object-contain"
+                className="h-16 sm:h-20 md:h-24 max-h-[80px] w-auto object-contain"
               />
               <span className="font-display font-bold text-lg sm:text-xl tracking-wider bg-gradient-to-r from-white via-slate-100 to-brand-gold bg-clip-text text-transparent">
                 CHASM BRIDGE
@@ -715,7 +715,7 @@ function App() {
               <img 
                 src={logo} 
                 alt="Chasm Bridge Charity Logo" 
-                className="h-10 w-auto object-contain brightness-95 opacity-80"
+                className="h-14 sm:h-16 w-auto object-contain brightness-95 opacity-80"
               />
               <span className="font-display font-bold text-base text-slate-200 tracking-wider">
                 CHASM BRIDGE CHARITY
