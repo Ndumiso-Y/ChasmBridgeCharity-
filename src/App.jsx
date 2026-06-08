@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import logo from './assets/LogoChasmBrridgeTransparent.png'
-import heroImg from './assets/images/HeroSpace.png'
-import heroMobileImg from './assets/images/Hero9by16.png'
-import pathwayImg from './assets/images/graduate-development-pathway.png'
-import stakeholderImg from './assets/images/stakeholder-collaboration.png'
+import logo from './assets/images/optimized/chasm-logo.webp'
+import heroImg from './assets/images/optimized/chasm-hero-desktop.webp'
+import heroMobileImg from './assets/images/optimized/chasm-hero-mobile.webp'
+import pathwayImg from './assets/images/optimized/graduate-development-pathway.webp'
+import stakeholderImg from './assets/images/optimized/stakeholder-collaboration.webp'
 
 import { 
   GraduationCap, 
@@ -234,18 +234,18 @@ function App() {
         <section className="relative flex items-start md:items-center min-h-[85svh] md:min-h-[85vh] lg:min-h-[95vh] pt-28 pb-16 md:py-20 lg:py-32 text-white overflow-hidden bg-brand-navy-dark">
           {/* Background Image & Overlay */}
           <div className="absolute inset-0 z-0">
-            {/* Desktop Hero Image (horizontal) */}
-            <img 
-              src={heroImg} 
-              alt="Graduates facing forward towards a brighter industrial horizon" 
-              className="hidden md:block w-full h-full object-cover md:object-[32%_center]"
-            />
-            {/* Dedicated Mobile Hero Image (vertical 9:16) */}
-            <img 
-              src={heroMobileImg} 
-              alt="Graduates standing on bridge with industrial horizon" 
-              className="block md:hidden w-full h-full object-cover object-top"
-            />
+            {/* Responsive Hero Image with WebP and Eager Loading */}
+            <picture>
+              <source media="(min-width: 768px)" srcSet={heroImg} />
+              <img 
+                src={heroMobileImg} 
+                alt="Graduates standing on bridge with industrial horizon" 
+                className="w-full h-full object-cover object-top md:object-[32%_center]"
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
+              />
+            </picture>
             {/* Full image overlay: rgba(0, 20, 45, 0.15) */}
             <div className="absolute inset-0 z-10" style={{ backgroundColor: 'rgba(0, 20, 45, 0.15)' }}></div>
             {/* Soft linear gradient overlay on the left text area for readability (stays under 0.30 opacity) */}
@@ -521,6 +521,8 @@ function App() {
                       src={pathwayImg} 
                       alt="Infographic depicting the graduate development pathway model" 
                       className="w-full h-auto object-cover"
+                      loading="lazy"
+                      decoding="async"
                     />
                     <div className="p-4 bg-slate-50 border-t border-slate-200 text-center">
                       <span className="text-xs text-slate-500 font-medium tracking-wide">
@@ -550,6 +552,8 @@ function App() {
                       src={stakeholderImg} 
                       alt="Young graduate receiving guidance from an industry mentor" 
                       className="w-full h-auto object-cover"
+                      loading="lazy"
+                      decoding="async"
                     />
                     <div className="p-4 bg-slate-50 border-t border-slate-200 text-center">
                       <span className="text-xs text-slate-500 font-medium tracking-wide">
@@ -724,6 +728,8 @@ function App() {
                 src={logo} 
                 alt="Chasm Bridge Charity Logo" 
                 className="h-14 sm:h-16 w-auto object-contain brightness-95 opacity-80"
+                loading="lazy"
+                decoding="async"
               />
               <span className="font-display font-bold text-base text-slate-200 tracking-wider">
                 CHASM BRIDGE CHARITY
