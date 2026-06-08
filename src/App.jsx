@@ -236,7 +236,7 @@ function App() {
             <img 
               src={heroImg} 
               alt="Graduates facing forward towards a brighter industrial horizon" 
-              className="w-full h-full object-cover object-center md:object-[80%_center]"
+              className="w-full h-full object-cover object-center md:object-[32%_center]"
             />
             {/* Full image overlay: rgba(0, 20, 45, 0.15) */}
             <div className="absolute inset-0 z-10" style={{ backgroundColor: 'rgba(0, 20, 45, 0.15)' }}></div>
@@ -246,27 +246,27 @@ function App() {
             <div className="absolute inset-0 z-10 bg-gradient-to-t from-brand-navy-dark/40 via-transparent to-brand-navy-dark/35"></div>
           </div>
           
-          <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            {/* Left-aligned content container, max-width around 620px to sit in negative space */}
-            <div className="max-w-[620px] space-y-6 lg:space-y-8 text-left">
+          <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex justify-start">
+            {/* Narrow, elegant, highly translucent glass panel to anchor readability and completely avoid overlap */}
+            <div className="w-full max-w-[480px] bg-brand-navy-dark/30 backdrop-blur-xs border border-white/5 p-6 sm:p-8 rounded-2xl shadow-xl space-y-6 lg:space-y-8 text-left hover:border-white/10 transition-smooth">
               
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-navy-light/80 border border-slate-700/40 text-brand-gold text-xs font-semibold uppercase tracking-wider hover-lift">
                 <Sparkles className="w-3.5 h-3.5 animate-pulse" />
                 Helping Graduates Get a Foot in the Door
               </div>
               
-              <h1 className="text-white text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold tracking-tight leading-tight drop-shadow-[0_4px_12px_rgba(7,11,25,0.75)]">
+              <h1 className="text-white text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold tracking-tight leading-tight drop-shadow-[0_4px_12px_rgba(7,11,25,0.75)]">
                 Helping Graduates Get <br />
                 <span className="bg-gradient-to-r from-brand-gold via-amber-400 to-amber-300 bg-clip-text text-transparent">
                   a Foot in the Door
                 </span>
               </h1>
               
-              <p className="text-slate-100 font-display text-lg sm:text-xl font-medium leading-relaxed max-w-2xl drop-shadow-[0_2px_8px_rgba(7,11,25,0.7)]">
+              <p className="text-slate-100 font-display text-base sm:text-lg font-medium leading-relaxed max-w-2xl drop-shadow-[0_2px_8px_rgba(7,11,25,0.7)]">
                 A graduate-development and social-impact initiative helping unemployed graduates bridge the gap between qualification and meaningful opportunity.
               </p>
 
-              <div className="border-l-4 border-brand-green pl-4 space-y-3 text-slate-200 text-sm sm:text-base font-medium leading-relaxed drop-shadow-[0_2px_8px_rgba(7,11,25,0.7)]">
+              <div className="border-l-4 border-brand-green pl-4 space-y-3 text-slate-200 text-xs sm:text-sm font-medium leading-relaxed drop-shadow-[0_2px_8px_rgba(7,11,25,0.7)]">
                 <p>
                   Every year, young people complete demanding qualifications with the hope of building a future. Yet for many graduates, the distance between academic achievement and industry opportunity remains difficult to cross.
                 </p>
@@ -278,14 +278,14 @@ function App() {
               <div className="flex flex-wrap items-center gap-4 pt-2">
                 <a 
                   href="mailto:Recruitment@chasmbridgecharity.com" 
-                  className="inline-flex items-center gap-2 bg-brand-gold hover:bg-brand-gold-dark text-brand-navy-dark px-6 py-4 rounded-xl font-bold hover-lift cursor-pointer shadow-lg shadow-brand-gold/15 focus-visible:outline-none"
+                  className="inline-flex items-center gap-2 bg-brand-gold hover:bg-brand-gold-dark text-brand-navy-dark px-5 py-3.5 rounded-xl font-bold hover-lift cursor-pointer shadow-lg shadow-brand-gold/15 focus-visible:outline-none text-sm"
                 >
-                  <Mail className="w-5 h-5" />
+                  <Mail className="w-4 h-4" />
                   Email Recruitment
                 </a>
                 <a 
                   href="#challenge" 
-                  className="inline-flex items-center gap-2 bg-brand-navy-dark/45 hover:bg-white/10 backdrop-blur-xs border border-slate-500/40 hover:border-slate-300 text-white px-6 py-4 rounded-xl font-semibold transition-smooth focus-visible:outline-none"
+                  className="inline-flex items-center gap-2 bg-brand-navy-dark/45 hover:bg-white/10 backdrop-blur-xs border border-slate-500/40 hover:border-slate-300 text-white px-5 py-3.5 rounded-xl font-semibold transition-smooth focus-visible:outline-none text-sm"
                 >
                   Learn More
                   <ArrowRight className="w-4 h-4 text-slate-300" />
