@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import logo from './assets/LogoChasmBrridge.png'
-import heroImg from './assets/images/Hero.png'
+import heroImg from './assets/images/HeroSpace.png'
 import pathwayImg from './assets/images/graduate-development-pathway.png'
 import stakeholderImg from './assets/images/stakeholder-collaboration.png'
 
@@ -236,37 +236,37 @@ function App() {
             <img 
               src={heroImg} 
               alt="Graduates facing forward towards a brighter industrial horizon" 
-              className="w-full h-full object-cover object-center lg:object-[center_30%]"
+              className="w-full h-full object-cover object-center lg:object-[left_center]"
             />
-            {/* Soft tint over the full image for brand atmosphere */}
-            <div className="absolute inset-0 bg-brand-navy-dark/20 z-10"></div>
-            {/* Lighter gradient helper for text contrast on the left side */}
-            <div className="absolute inset-0 bg-gradient-to-r from-brand-navy-dark/45 via-brand-navy-dark/15 to-transparent z-10"></div>
-            {/* Softer top-bottom transition fade */}
-            <div className="absolute inset-0 bg-gradient-to-t from-brand-navy-dark/50 via-transparent to-brand-navy-dark/45 z-10"></div>
+            {/* Full image overlay: rgba(0, 20, 45, 0.15) */}
+            <div className="absolute inset-0 z-10" style={{ backgroundColor: 'rgba(0, 20, 45, 0.15)' }}></div>
+            {/* Soft linear gradient overlay on the left text area for readability (stays under 0.32 opacity) */}
+            <div className="absolute inset-0 z-10" style={{ backgroundImage: 'linear-gradient(to right, rgba(0, 20, 45, 0.32) 0%, rgba(0, 20, 45, 0.15) 50%, transparent 100%)' }}></div>
+            {/* Soft vertical transition overlay */}
+            <div className="absolute inset-0 z-10 bg-gradient-to-t from-brand-navy-dark/40 via-transparent to-brand-navy-dark/35"></div>
           </div>
           
           <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            {/* Subtly translucent premium glass panel for readability */}
-            <div className="max-w-3xl bg-brand-navy-dark/40 backdrop-blur-md border border-white/10 p-6 sm:p-8 lg:p-10 rounded-2xl shadow-2xl space-y-6 lg:space-y-8 text-left hover:border-white/15 transition-smooth">
+            {/* Left-aligned content container, max-width around 620px to sit in negative space */}
+            <div className="max-w-[620px] space-y-6 lg:space-y-8 text-left">
               
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-navy-light/95 border border-slate-700/60 text-brand-gold text-xs font-semibold uppercase tracking-wider hover-lift">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-navy-light/80 border border-slate-700/40 text-brand-gold text-xs font-semibold uppercase tracking-wider hover-lift">
                 <Sparkles className="w-3.5 h-3.5 animate-pulse" />
                 Slogan: Helping Graduates Get a Foot in the Door
               </div>
               
-              <h1 className="text-white text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold tracking-tight leading-tight">
+              <h1 className="text-white text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold tracking-tight leading-tight drop-shadow-md">
                 Helping Graduates Get <br />
                 <span className="bg-gradient-to-r from-brand-gold via-amber-400 to-amber-300 bg-clip-text text-transparent">
                   a Foot in the Door
                 </span>
               </h1>
               
-              <p className="text-slate-100 font-display text-lg sm:text-xl font-medium leading-relaxed max-w-2xl">
+              <p className="text-slate-100 font-display text-lg sm:text-xl font-medium leading-relaxed max-w-2xl drop-shadow-sm">
                 A graduate-development and social-impact initiative helping unemployed graduates bridge the gap between qualification and meaningful opportunity.
               </p>
 
-              <div className="border-l-4 border-brand-green pl-4 space-y-3 text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl">
+              <div className="border-l-4 border-brand-green pl-4 space-y-3 text-slate-200 text-sm sm:text-base leading-relaxed drop-shadow-sm">
                 <p>
                   Every year, young people complete demanding qualifications with the hope of building a future. Yet for many graduates, the distance between academic achievement and industry opportunity remains difficult to cross.
                 </p>
@@ -278,14 +278,14 @@ function App() {
               <div className="flex flex-wrap items-center gap-4 pt-2">
                 <a 
                   href="mailto:Recruitment@chasmbridgecharity.com" 
-                  className="inline-flex items-center gap-2 bg-brand-gold hover:bg-brand-gold-dark text-brand-navy-dark px-6 py-4 rounded-xl font-bold hover-lift cursor-pointer shadow-lg shadow-brand-gold/10 focus-visible:outline-none"
+                  className="inline-flex items-center gap-2 bg-brand-gold hover:bg-brand-gold-dark text-brand-navy-dark px-6 py-4 rounded-xl font-bold hover-lift cursor-pointer shadow-lg shadow-brand-gold/15 focus-visible:outline-none"
                 >
                   <Mail className="w-5 h-5" />
                   Email Recruitment
                 </a>
                 <a 
                   href="#challenge" 
-                  className="inline-flex items-center gap-2 bg-brand-navy-dark/65 hover:bg-white/10 backdrop-blur-sm border border-slate-500/80 hover:border-slate-300 text-white px-6 py-4 rounded-xl font-semibold transition-smooth focus-visible:outline-none"
+                  className="inline-flex items-center gap-2 bg-brand-navy-dark/45 hover:bg-white/10 backdrop-blur-xs border border-slate-500/40 hover:border-slate-300 text-white px-6 py-4 rounded-xl font-semibold transition-smooth focus-visible:outline-none"
                 >
                   Learn More
                   <ArrowRight className="w-4 h-4 text-slate-300" />
