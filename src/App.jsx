@@ -740,9 +740,22 @@ function App() {
           </div>
           
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 text-xs text-slate-500">
-            <p>
-              &copy; {new Date().getFullYear()} Chasm Bridge Charity. All rights reserved.
-            </p>
+            <div className="flex flex-col gap-1 items-center sm:items-start">
+              <p>
+                &copy; {new Date().getFullYear()} Chasm Bridge Charity. All rights reserved.
+              </p>
+              <p className="text-slate-500/80">
+                Website designed, developed &amp; hosted by{' '}
+                <a 
+                  href="https://www.embarkdigitals.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-slate-400 hover:text-brand-gold transition-colors duration-200 font-medium focus-visible:ring-1 focus-visible:ring-brand-gold focus-visible:outline-none"
+                >
+                  Embark Digitals
+                </a>.
+              </p>
+            </div>
             <p className="flex items-center gap-1.5">
               <span>Recruitment Portal:</span>
               <a href="mailto:Recruitment@chasmbridgecharity.com" className="text-slate-400 hover:text-brand-gold transition-colors font-medium">
