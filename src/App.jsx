@@ -12,7 +12,6 @@ import {
   Award, 
   Coins, 
   Users, 
-  CheckCircle, 
   ChevronDown, 
   Mail, 
   ShieldAlert, 
@@ -21,9 +20,7 @@ import {
   X,
   Target,
   Eye,
-  Workflow,
-  Sparkles,
-  Link
+  Sparkles
 } from 'lucide-react'
 
 function App() {
@@ -498,9 +495,9 @@ function App() {
                         {step.step}
                       </div>
                       <div className="space-y-1">
-                        <h4 className="font-bold text-brand-navy-dark text-base font-display">
+                        <h3 className="font-bold text-brand-navy-dark text-base font-display">
                           {step.title}
-                        </h4>
+                        </h3>
                         <p className="text-slate-600 text-xs sm:text-sm">
                           {step.description}
                         </p>
@@ -705,7 +702,7 @@ function App() {
             <div className="pt-4 flex flex-col items-center">
               <a 
                 href="mailto:Recruitment@chasmbridgecharity.com" 
-                className="inline-flex items-center gap-2 bg-brand-gold hover:bg-brand-gold-dark text-brand-navy-dark px-8 py-4 rounded-xl text-base font-bold hover-lift cursor-pointer focus-visible:outline-none"
+                className="inline-flex items-center justify-center gap-2 bg-brand-gold hover:bg-brand-gold-dark text-brand-navy-dark px-4 sm:px-8 py-3.5 sm:py-4 rounded-xl text-sm sm:text-base font-bold hover-lift cursor-pointer focus-visible:outline-none max-w-full text-center break-all sm:break-normal"
               >
                 <Mail className="w-5 h-5" />
                 Recruitment@chasmbridgecharity.com
@@ -762,9 +759,9 @@ function App() {
                 </a>.
               </p>
             </div>
-            <p className="flex items-center gap-1.5">
+            <p className="flex flex-wrap items-center gap-1.5 justify-center sm:justify-start">
               <span>Recruitment Portal:</span>
-              <a href="mailto:Recruitment@chasmbridgecharity.com" className="text-slate-400 hover:text-brand-gold transition-colors font-medium">
+              <a href="mailto:Recruitment@chasmbridgecharity.com" className="text-slate-400 hover:text-brand-gold transition-colors font-medium break-all sm:break-normal">
                 Recruitment@chasmbridgecharity.com
               </a>
             </p>
