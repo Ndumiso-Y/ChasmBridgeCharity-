@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import logo from './assets/LogoChasmBrridge.png'
+import logo from './assets/LogoChasmBrridgeTransparent.png'
 import heroImg from './assets/images/HeroSpace.png'
 import pathwayImg from './assets/images/graduate-development-pathway.png'
 import stakeholderImg from './assets/images/stakeholder-collaboration.png'
