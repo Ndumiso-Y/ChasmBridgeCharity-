@@ -238,34 +238,35 @@ function App() {
               alt="Graduates facing forward towards a brighter industrial horizon" 
               className="w-full h-full object-cover object-center lg:object-[center_30%]"
             />
-            {/* Base overall dark overlay for general readability */}
-            <div className="absolute inset-0 bg-brand-navy-dark/40 lg:bg-brand-navy-dark/20 z-10"></div>
-            {/* Linear gradient overlay: dark navy on the left (text area) fading to transparent on the right */}
-            <div className="absolute inset-0 bg-gradient-to-r from-brand-navy-dark via-brand-navy-dark/95 to-transparent z-10"></div>
-            {/* Vertical gradient: dark navy on top (for header readability) and bottom (for transition to next section) */}
-            <div className="absolute inset-0 bg-gradient-to-t from-brand-navy-dark via-transparent to-brand-navy-dark/70 z-10"></div>
+            {/* Soft tint over the full image for brand atmosphere */}
+            <div className="absolute inset-0 bg-brand-navy-dark/20 z-10"></div>
+            {/* Lighter gradient helper for text contrast on the left side */}
+            <div className="absolute inset-0 bg-gradient-to-r from-brand-navy-dark/45 via-brand-navy-dark/15 to-transparent z-10"></div>
+            {/* Softer top-bottom transition fade */}
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-navy-dark/50 via-transparent to-brand-navy-dark/45 z-10"></div>
           </div>
           
           <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <div className="max-w-3xl space-y-6 lg:space-y-8 text-left">
+            {/* Subtly translucent premium glass panel for readability */}
+            <div className="max-w-3xl bg-brand-navy-dark/40 backdrop-blur-md border border-white/10 p-6 sm:p-8 lg:p-10 rounded-2xl shadow-2xl space-y-6 lg:space-y-8 text-left hover:border-white/15 transition-smooth">
               
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-navy-light/95 border border-slate-700/60 text-brand-gold text-xs font-bold uppercase tracking-wider hover-lift">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-navy-light/95 border border-slate-700/60 text-brand-gold text-xs font-semibold uppercase tracking-wider hover-lift">
                 <Sparkles className="w-3.5 h-3.5 animate-pulse" />
                 Slogan: Helping Graduates Get a Foot in the Door
               </div>
               
-              <h1 className="text-white text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold tracking-tight leading-tight drop-shadow-md">
+              <h1 className="text-white text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold tracking-tight leading-tight">
                 Helping Graduates Get <br />
                 <span className="bg-gradient-to-r from-brand-gold via-amber-400 to-amber-300 bg-clip-text text-transparent">
                   a Foot in the Door
                 </span>
               </h1>
               
-              <p className="text-slate-200 font-display text-lg sm:text-xl font-medium leading-relaxed max-w-2xl drop-shadow-sm">
+              <p className="text-slate-100 font-display text-lg sm:text-xl font-medium leading-relaxed max-w-2xl">
                 A graduate-development and social-impact initiative helping unemployed graduates bridge the gap between qualification and meaningful opportunity.
               </p>
 
-              <div className="border-l-4 border-brand-green pl-4 space-y-3 text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl bg-brand-navy-dark/50 backdrop-blur-xs py-4 pr-4 rounded-r-lg border-y border-r border-slate-700/20">
+              <div className="border-l-4 border-brand-green pl-4 space-y-3 text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl">
                 <p>
                   Every year, young people complete demanding qualifications with the hope of building a future. Yet for many graduates, the distance between academic achievement and industry opportunity remains difficult to cross.
                 </p>
