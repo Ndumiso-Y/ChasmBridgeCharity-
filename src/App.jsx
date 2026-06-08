@@ -230,78 +230,76 @@ function App() {
       <main className="flex-grow">
         
         {/* 1. Hero Section */}
-        <section className="relative bg-gradient-to-b from-brand-navy-dark via-brand-navy to-brand-navy-light text-white overflow-hidden py-16 lg:py-24">
-          {/* Subtle background overlay elements */}
-          <div className="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-brand-gold via-transparent to-transparent"></div>
+        <section className="relative flex items-center min-h-[85vh] lg:min-h-[95vh] py-20 lg:py-32 text-white overflow-hidden bg-brand-navy-dark">
+          {/* Background Image & Overlay */}
+          <div className="absolute inset-0 z-0">
+            <img 
+              src={heroImg} 
+              alt="Graduates facing forward towards a brighter industrial horizon" 
+              className="w-full h-full object-cover object-center lg:object-[center_30%]"
+            />
+            {/* Base overall dark overlay for general readability */}
+            <div className="absolute inset-0 bg-brand-navy-dark/40 lg:bg-brand-navy-dark/20 z-10"></div>
+            {/* Linear gradient overlay: dark navy on the left (text area) fading to transparent on the right */}
+            <div className="absolute inset-0 bg-gradient-to-r from-brand-navy-dark via-brand-navy-dark/95 to-transparent z-10"></div>
+            {/* Vertical gradient: dark navy on top (for header readability) and bottom (for transition to next section) */}
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-navy-dark via-transparent to-brand-navy-dark/70 z-10"></div>
+          </div>
           
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div className="max-w-3xl space-y-6 lg:space-y-8 text-left">
               
-              {/* Text content */}
-              <div className="lg:col-span-7 space-y-6">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-navy-light border border-slate-700/50 text-brand-gold text-xs font-semibold uppercase tracking-wider">
-                  <Sparkles className="w-3.5 h-3.5" />
-                  Slogan: Helping Graduates Get a Foot in the Door
-                </div>
-                
-                <h1 className="text-white text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold tracking-tight leading-tight">
-                  Helping Graduates Get <br />
-                  <span className="bg-gradient-to-r from-brand-gold via-amber-400 to-amber-300 bg-clip-text text-transparent">
-                    a Foot in the Door
-                  </span>
-                </h1>
-                
-                <p className="text-slate-300 font-display text-lg sm:text-xl font-medium leading-relaxed max-w-2xl">
-                  A graduate-development and social-impact initiative helping unemployed graduates bridge the gap between qualification and meaningful opportunity.
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-navy-light/95 border border-slate-700/60 text-brand-gold text-xs font-bold uppercase tracking-wider hover-lift">
+                <Sparkles className="w-3.5 h-3.5 animate-pulse" />
+                Slogan: Helping Graduates Get a Foot in the Door
+              </div>
+              
+              <h1 className="text-white text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold tracking-tight leading-tight drop-shadow-md">
+                Helping Graduates Get <br />
+                <span className="bg-gradient-to-r from-brand-gold via-amber-400 to-amber-300 bg-clip-text text-transparent">
+                  a Foot in the Door
+                </span>
+              </h1>
+              
+              <p className="text-slate-200 font-display text-lg sm:text-xl font-medium leading-relaxed max-w-2xl drop-shadow-sm">
+                A graduate-development and social-impact initiative helping unemployed graduates bridge the gap between qualification and meaningful opportunity.
+              </p>
+
+              <div className="border-l-4 border-brand-green pl-4 space-y-3 text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl bg-brand-navy-dark/50 backdrop-blur-xs py-4 pr-4 rounded-r-lg border-y border-r border-slate-700/20">
+                <p>
+                  Every year, young people complete demanding qualifications with the hope of building a future. Yet for many graduates, the distance between academic achievement and industry opportunity remains difficult to cross.
                 </p>
-
-                <div className="border-l-4 border-brand-green/60 pl-4 space-y-3 text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl">
-                  <p>
-                    Every year, young people complete demanding qualifications with the hope of building a future. Yet for many graduates, the distance between academic achievement and industry opportunity remains difficult to cross.
-                  </p>
-                  <p className="font-semibold text-white">
-                    Chasm Bridge Charity exists to help close that gap.
-                  </p>
-                </div>
-
-                <div className="flex flex-wrap items-center gap-4 pt-4">
-                  <a 
-                    href="mailto:Recruitment@chasmbridgecharity.com" 
-                    className="inline-flex items-center gap-2 bg-brand-gold hover:bg-brand-gold-dark text-brand-navy-dark px-6 py-3.5 rounded-xl font-bold hover-lift cursor-pointer focus-visible:outline-none"
-                  >
-                    <Mail className="w-5 h-5" />
-                    Email Recruitment
-                  </a>
-                  <a 
-                    href="#challenge" 
-                    className="inline-flex items-center gap-2 bg-transparent hover:bg-white/5 border border-slate-600 hover:border-slate-400 text-white px-6 py-3.5 rounded-xl font-semibold transition-colors focus-visible:outline-none"
-                  >
-                    Learn More
-                    <ArrowRight className="w-4 h-4 text-slate-400" />
-                  </a>
-                </div>
+                <p className="font-semibold text-white">
+                  Chasm Bridge Charity exists to help close that gap.
+                </p>
               </div>
 
-              {/* Image content */}
-              <div className="lg:col-span-5 relative">
-                <div className="relative mx-auto max-w-md lg:max-w-none">
-                  {/* Decorative Glow */}
-                  <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-brand-gold/20 to-brand-green/20 blur-xl opacity-60"></div>
-                  
-                  {/* Primary Hero Image */}
-                  <div className="relative bg-brand-navy-light rounded-2xl overflow-hidden shadow-2xl border border-slate-700/50">
-                    <img 
-                      src={heroImg} 
-                      alt="Graduates facing forward towards a brighter industrial horizon" 
-                      className="w-full h-auto object-cover aspect-[4/3] sm:aspect-square lg:aspect-[4/3]"
-                    />
-                    {/* Bottom visual fade */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-brand-navy-dark/60 via-transparent to-transparent"></div>
-                  </div>
-                </div>
+              <div className="flex flex-wrap items-center gap-4 pt-2">
+                <a 
+                  href="mailto:Recruitment@chasmbridgecharity.com" 
+                  className="inline-flex items-center gap-2 bg-brand-gold hover:bg-brand-gold-dark text-brand-navy-dark px-6 py-4 rounded-xl font-bold hover-lift cursor-pointer shadow-lg shadow-brand-gold/10 focus-visible:outline-none"
+                >
+                  <Mail className="w-5 h-5" />
+                  Email Recruitment
+                </a>
+                <a 
+                  href="#challenge" 
+                  className="inline-flex items-center gap-2 bg-brand-navy-dark/65 hover:bg-white/10 backdrop-blur-sm border border-slate-500/80 hover:border-slate-300 text-white px-6 py-4 rounded-xl font-semibold transition-smooth focus-visible:outline-none"
+                >
+                  Learn More
+                  <ArrowRight className="w-4 h-4 text-slate-300" />
+                </a>
               </div>
-
+              
             </div>
+          </div>
+
+          {/* Subtle scroll cue at bottom center */}
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 hidden lg:flex flex-col items-center gap-1.5 text-slate-400 hover:text-white transition-colors">
+            <span className="text-xs uppercase tracking-widest font-semibold font-display">Scroll to explore</span>
+            <a href="#challenge" aria-label="Scroll to challenge section" className="animate-bounce p-1 hover:text-brand-gold focus-visible:outline-none">
+              <ChevronDown className="w-5 h-5" />
+            </a>
           </div>
         </section>
 
