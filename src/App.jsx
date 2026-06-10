@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import DigitalBusinessCard from './components/DigitalBusinessCard'
 import logo from './assets/images/optimized/chasm-logo.webp'
 import heroImg from './assets/images/optimized/chasm-hero-desktop.webp'
 import heroMobileImg from './assets/images/optimized/chasm-hero-mobile.webp'
@@ -23,9 +24,33 @@ import {
   Sparkles
 } from 'lucide-react'
 
-function App() {
+function HomePage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [openFaq, setOpenFaq] = useState(null)
+
+  useEffect(() => {
+    const desktopPreload = document.createElement('link')
+    const mobilePreload = document.createElement('link')
+
+    desktopPreload.rel = 'preload'
+    desktopPreload.as = 'image'
+    desktopPreload.href = heroImg
+    desktopPreload.media = '(min-width: 768px)'
+    desktopPreload.fetchPriority = 'high'
+
+    mobilePreload.rel = 'preload'
+    mobilePreload.as = 'image'
+    mobilePreload.href = heroMobileImg
+    mobilePreload.media = '(max-width: 767px)'
+    mobilePreload.fetchPriority = 'high'
+
+    document.head.append(desktopPreload, mobilePreload)
+
+    return () => {
+      desktopPreload.remove()
+      mobilePreload.remove()
+    }
+  }, [])
 
   const toggleFaq = (index) => {
     setOpenFaq(openFaq === index ? null : index)
@@ -771,6 +796,16 @@ function App() {
 
     </div>
   )
+}
+
+function App() {
+  const isDigitalCardRoute = window.location.pathname.startsWith('/cards/')
+
+  if (isDigitalCardRoute) {
+    return <DigitalBusinessCard />
+  }
+
+  return <HomePage />
 }
 
 export default App
